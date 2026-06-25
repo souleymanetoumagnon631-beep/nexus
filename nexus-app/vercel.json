@@ -1,0 +1,7 @@
+{
+    "build": {
+        "env": {
+            "LIGHTNINGCSS_DISABLE": "1"
+        }
+    }
+}
