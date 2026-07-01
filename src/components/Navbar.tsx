@@ -40,60 +40,55 @@ export default function Navbar() {
         <nav
             ref={navRef}
             className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-[2rem] ${scrolled
-                    ? 'bg-surface-900/60 backdrop-blur-xl shadow-lg shadow-black/20'
-                    : 'bg-surface-900/30 backdrop-blur-sm'
+                    ? 'bg-white/80 backdrop-blur-xl shadow-md shadow-black/5'
+                    : 'bg-white/50 backdrop-blur-sm'
                 }`}
         >
             <div className="flex items-center justify-between px-6 py-3 md:px-8 md:py-3 min-w-[320px] md:min-w-[640px]">
-                {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 lift-hover">
                     <img src="/logo-icon.svg" alt="NEXUS" className="w-8 h-8" />
-                    <span className="font-serif text-xl font-semibold tracking-wider text-primary-400">
+                    <span className="font-serif text-xl font-semibold tracking-wider text-gray-900">
                         NEXUS
                     </span>
                 </Link>
 
-                {/* Desktop links */}
                 <div className="hidden md:flex items-center gap-8">
                     {NAV_LINKS.map((link) => (
                         <a
                             key={link.href}
                             href={link.href}
-                            className="nav-item text-sm text-surface-300 hover:text-primary-400 transition-colors lift-hover"
+                            className="nav-item text-sm text-gray-600 hover:text-primary-500 transition-colors lift-hover"
                         >
                             {link.label}
                         </a>
                     ))}
                 </div>
 
-                {/* CTA */}
                 <Link
                     to="/signup"
-                    className="btn-magnetic hidden md:inline-flex px-5 py-2 bg-primary-500 text-surface-950 font-semibold text-sm rounded-full"
+                    className="btn-magnetic hidden md:inline-flex px-5 py-2 bg-primary-500 text-white font-semibold text-sm rounded-full"
                 >
-                    <span className="btn-bg bg-primary-400 rounded-full" />
+                    <span className="btn-bg bg-primary-600 rounded-full" />
                     Essayer gratuitement
                 </Link>
 
-                {/* Mobile toggle */}
                 <button
                     onClick={() => setMobileOpen(!mobileOpen)}
-                    className="md:hidden text-surface-300 p-1"
+                    className="md:hidden text-gray-600 p-1"
                     aria-label="Menu"
                 >
                     {mobileOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
 
-            {/* Mobile menu */}
             {mobileOpen && (
-                <div className="md:hidden px-6 pb-4 pt-2 flex flex-col gap-3 border-t border-surface-700/50">
+                <div className="md:hidden px-6 pb-4 pt-2 flex flex-col gap-3 border-t border-gray-200">
                     {NAV_LINKS.map((link) => (
                         <a
                             key={link.href}
                             href={link.href}
                             onClick={() => setMobileOpen(false)}
-                            className="text-surface-300 hover:text-primary-400 transition-colors py-1"
+                            className="text-gray-600 hover:text-primary-500 transition-colors py-1"
                         >
                             {link.label}
                         </a>
@@ -101,9 +96,9 @@ export default function Navbar() {
                     <Link
                         to="/signup"
                         onClick={() => setMobileOpen(false)}
-                        className="btn-magnetic self-start px-5 py-2 bg-primary-500 text-surface-950 font-semibold text-sm rounded-full mt-2"
+                        className="btn-magnetic self-start px-5 py-2 bg-primary-500 text-white font-semibold text-sm rounded-full mt-2"
                     >
-                        <span className="btn-bg bg-primary-400 rounded-full" />
+                        <span className="btn-bg bg-primary-600 rounded-full" />
                         Essayer gratuitement
                     </Link>
                 </div>

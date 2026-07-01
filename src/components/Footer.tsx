@@ -15,36 +15,33 @@ const LEGAL_LINKS = [
 
 export default function Footer() {
     return (
-        <footer className="rounded-t-[4rem] bg-surface-900/80 border-t border-surface-700/30 px-6 md:px-16 lg:px-24 py-16">
+        <footer className="rounded-t-[4rem] bg-gray-100 border-t border-gray-200 px-6 md:px-16 lg:px-24 py-16">
             <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    {/* Brand */}
                     <div>
                         <Link to="/" className="flex items-center gap-2 mb-4">
                             <img src="/logo-icon.svg" alt="NEXUS" className="w-8 h-8" />
-                            <span className="font-serif text-xl font-semibold tracking-wider text-primary-400">
+                            <span className="font-serif text-xl font-semibold tracking-wider text-gray-900">
                                 NEXUS
                             </span>
                         </Link>
-                        <p className="text-surface-400 text-sm leading-relaxed max-w-xs">
+                        <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
                             La mémoire qui rend les commerçants ouest-africains finançables — sans changer une seule de leurs habitudes.
                         </p>
-                        {/* System status */}
                         <div className="flex items-center gap-2 mt-6">
-                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            <span className="text-surface-500 text-xs font-mono tracking-wider">Système Opérationnel</span>
+                            <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
+                            <span className="text-gray-400 text-xs font-mono tracking-wider">Système Opérationnel</span>
                         </div>
                     </div>
 
-                    {/* Navigation */}
                     <div>
-                        <h4 className="font-serif text-surface-50 text-sm mb-4 tracking-wider uppercase">Navigation</h4>
+                        <h4 className="font-serif text-gray-900 text-sm mb-4 tracking-wider uppercase">Navigation</h4>
                         <ul className="space-y-3">
                             {FOOTER_LINKS.map((link) => (
                                 <li key={link.href}>
                                     <a
                                         href={link.href}
-                                        className="text-surface-400 hover:text-primary-400 transition-colors text-sm lift-hover"
+                                        className="text-gray-500 hover:text-primary-500 transition-colors text-sm lift-hover"
                                     >
                                         {link.label}
                                     </a>
@@ -53,15 +50,14 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Legal */}
                     <div>
-                        <h4 className="font-serif text-surface-50 text-sm mb-4 tracking-wider uppercase">Légal</h4>
+                        <h4 className="font-serif text-gray-900 text-sm mb-4 tracking-wider uppercase">Légal</h4>
                         <ul className="space-y-3">
                             {LEGAL_LINKS.map((link) => (
                                 <li key={link.label}>
                                     <a
                                         href={link.href}
-                                        className="text-surface-400 hover:text-primary-400 transition-colors text-sm lift-hover"
+                                        className="text-gray-500 hover:text-primary-500 transition-colors text-sm lift-hover"
                                     >
                                         {link.label}
                                     </a>
@@ -71,11 +67,11 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-surface-700/30 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-surface-500 text-xs">
+                <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p className="text-gray-400 text-xs">
                         &copy; {new Date().getFullYear()} NEXUS. Tous droits réservés.
                     </p>
-                    <p className="text-surface-600 text-xs font-mono">
+                    <p className="text-gray-400 text-xs font-mono">
                         NEXUS — Djali v1.0
                     </p>
                 </div>

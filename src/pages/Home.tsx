@@ -13,7 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
     useEffect(() => {
-        // Refresh ScrollTrigger after all components mount
         const timeout = setTimeout(() => {
             ScrollTrigger.refresh();
         }, 100);
@@ -24,7 +23,7 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="relative min-h-screen bg-surface-950">
+        <main className="relative min-h-screen bg-white">
             <Navbar />
             <Hero />
             <Features />

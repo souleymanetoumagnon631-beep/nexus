@@ -27,10 +27,9 @@ export default function Philosophy() {
         <section
             id="philosophy"
             ref={sectionRef}
-            className="relative py-36 md:py-48 px-6 md:px-16 lg:px-24 overflow-hidden"
+            className="relative py-36 md:py-48 px-6 md:px-16 lg:px-24 overflow-hidden bg-gray-50"
         >
-            {/* Texture background */}
-            <div className="absolute inset-0 opacity-[0.04]">
+            <div className="absolute inset-0 opacity-[0.03]">
                 <img
                     src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2020&auto=format&fit=crop"
                     alt=""
@@ -39,20 +38,20 @@ export default function Philosophy() {
             </div>
 
             <div className="relative z-10 max-w-5xl mx-auto">
-                <p className="phil-label font-mono text-xs tracking-[0.3em] uppercase text-surface-500 mb-8">
+                <p className="phil-label font-mono text-xs tracking-[0.3em] uppercase text-gray-400 mb-8">
                     Notre philosophie
                 </p>
 
-                <p className="phil-declaration font-serif text-3xl md:text-5xl lg:text-6xl text-surface-400 font-light leading-tight">
+                <p className="phil-declaration font-serif text-3xl md:text-5xl lg:text-6xl text-gray-400 font-light leading-tight">
                     La plupart des fintechs construisent des outils pour des comptables.
                 </p>
 
-                <p className="phil-accent font-serif italic text-4xl md:text-6xl lg:text-7xl text-surface-50 font-light leading-[1.1] mt-12">
+                <p className="phil-accent font-serif italic text-4xl md:text-6xl lg:text-7xl text-gray-900 font-light leading-[1.1] mt-12">
                     Nous construisons une mémoire
                     <br />
                     pour ceux qui n'ont
                     <br />
-                    <span className="text-primary-400 font-medium not-italic">jamais eu de dossier</span>.
+                    <span className="text-primary-500 font-medium not-italic">jamais eu de dossier</span>.
                 </p>
             </div>
         </section>

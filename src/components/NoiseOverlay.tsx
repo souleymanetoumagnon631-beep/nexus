@@ -5,8 +5,8 @@ export default function NoiseOverlay() {
                 <filter id="noiseFilter">
                     <feTurbulence
                         type="fractalNoise"
-                        baseFrequency="0.65"
-                        numOctaves="3"
+                        baseFrequency="0.4"
+                        numOctaves="2"
                         stitchTiles="stitch"
                     />
                     <feColorMatrix type="saturate" values="0" />

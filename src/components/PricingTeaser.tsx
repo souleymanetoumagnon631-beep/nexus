@@ -61,16 +61,16 @@ export default function PricingTeaser() {
     }, []);
 
     return (
-        <section id="pricing" ref={sectionRef} className="relative py-28 md:py-36 px-6 md:px-16 lg:px-24">
+        <section id="pricing" ref={sectionRef} className="relative py-28 md:py-36 px-6 md:px-16 lg:px-24 bg-gray-50">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    <p className="font-mono text-xs tracking-[0.3em] uppercase text-surface-500 mb-4">
+                    <p className="font-mono text-xs tracking-[0.3em] uppercase text-gray-400 mb-4">
                         Tarifs
                     </p>
-                    <h2 className="font-serif text-4xl md:text-5xl text-surface-50 font-light">
-                        Un palier pour chaque <span className="text-primary-400">volume</span>.
+                    <h2 className="font-serif text-4xl md:text-5xl text-gray-900 font-light">
+                        Un palier pour chaque <span className="text-primary-500">volume</span>.
                     </h2>
-                    <p className="text-surface-400 mt-4 max-w-xl mx-auto">
+                    <p className="text-gray-500 mt-4 max-w-xl mx-auto">
                         Gratuit pour commencer. Tu ne paies que quand NEXUS te prouve sa valeur.
                     </p>
                 </div>
@@ -80,21 +80,21 @@ export default function PricingTeaser() {
                         <div
                             key={i}
                             className={`pricing-card rounded-[2rem] p-8 flex flex-col ${plan.featured
-                                    ? 'bg-gradient-to-b from-primary-500/15 to-surface-900 border border-primary-500/30 scale-105 md:scale-110'
-                                    : 'bg-surface-900/50 border border-surface-700/40'
+                                    ? 'bg-white border-2 border-primary-500 shadow-lg scale-105 md:scale-110'
+                                    : 'bg-white border border-gray-200 shadow-sm'
                                 }`}
                         >
-                            <h3 className="font-serif text-xl text-surface-50 mb-1">{plan.name}</h3>
-                            <p className="text-surface-400 text-sm mb-4">{plan.desc}</p>
+                            <h3 className="font-serif text-xl text-gray-900 mb-1">{plan.name}</h3>
+                            <p className="text-gray-500 text-sm mb-4">{plan.desc}</p>
                             <div className="mb-6">
-                                <span className="font-serif text-4xl text-surface-50">{plan.price}</span>
-                                <span className="text-surface-400 ml-1">{plan.period}</span>
+                                <span className="font-serif text-4xl text-gray-900">{plan.price}</span>
+                                <span className="text-gray-400 ml-1">{plan.period}</span>
                             </div>
 
                             <ul className="space-y-3 mb-8 flex-1">
                                 {plan.features.map((f, j) => (
-                                    <li key={j} className="flex items-start gap-3 text-sm text-surface-300">
-                                        <Check size={16} className="text-primary-400 mt-0.5 flex-shrink-0" />
+                                    <li key={j} className="flex items-start gap-3 text-sm text-gray-600">
+                                        <Check size={16} className="text-primary-500 mt-0.5 flex-shrink-0" />
                                         {f}
                                     </li>
                                 ))}
@@ -103,11 +103,11 @@ export default function PricingTeaser() {
                             <Link
                                 to={plan.href}
                                 className={`btn-magnetic w-full py-3 rounded-full text-sm font-semibold text-center ${plan.featured
-                                        ? 'bg-primary-500 text-surface-950'
-                                        : 'border border-surface-600 text-surface-200'
+                                        ? 'bg-primary-500 text-white'
+                                        : 'border border-gray-300 text-gray-700'
                                     }`}
                             >
-                                <span className={`btn-bg rounded-full ${plan.featured ? 'bg-primary-400' : 'bg-surface-800'}`} />
+                                <span className={`btn-bg rounded-full ${plan.featured ? 'bg-primary-600' : 'bg-gray-100'}`} />
                                 {plan.cta}
                             </Link>
                         </div>
@@ -117,7 +117,7 @@ export default function PricingTeaser() {
                 <div className="text-center mt-12">
                     <Link
                         to="/pricing"
-                        className="text-surface-400 hover:text-primary-400 transition-colors text-sm lift-hover inline-flex items-center gap-1"
+                        className="text-gray-500 hover:text-primary-500 transition-colors text-sm lift-hover inline-flex items-center gap-1"
                     >
                         Voir les détails complets →
                     </Link>

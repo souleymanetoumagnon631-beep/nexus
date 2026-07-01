@@ -4,11 +4,11 @@
 
 @layer base {
     * {
-        @apply border-surface-700;
+        @apply border-gray-200;
     }
 
     body {
-        @apply bg-surface-950 text-surface-50 antialiased overflow-x-hidden;
+        @apply bg-white text-gray-900 antialiased overflow-x-hidden;
         font-family: 'Inter', system-ui, sans-serif;
     }
 
@@ -30,8 +30,8 @@
         height: 100vh;
         pointer-events: none;
         z-index: 9999;
-        opacity: 0.04;
-        mix-blend-mode: overlay;
+        opacity: 0.015;
+        mix-blend-mode: multiply;
     }
 
     .btn-magnetic {
