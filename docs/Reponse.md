@@ -102,9 +102,7 @@ Supabase : pas encore de projet créé — l'IA devra documenter le schéma comp
 
 Passerelles de paiement :
 
-
-Stripe : pas de compte existant — à documenter sans déploiement, et à noter : Stripe sera surtout utile pour l'éventuel abonnement des paliers Pro/Croissance si facturé en carte internationale, mais pas pour les flux mobile money des commerçants eux-mêmes, qui passeront par les passerelles locales.
-Passerelle africaine (CinetPay, PayDunya, ou autre) : pas de compte existant — à documenter sans déploiement. C'est en réalité la passerelle prioritaire pour ce produit, puisque l'abonnement lui-même sera très probablement payé en mobile money par la majorité des utilisateurs, pas par carte.
+Passerelle africaine Senepay :  A utiliser sur tout le paiement
 
 
 Exécution serveur : compte tenu de l'absence de plateforme de déploiement encore choisie, et du fait que ce produit dépendra fortement de Supabase pour l'authentification, la base de données et le stockage du score de crédit, la recommandation par défaut cohérente est :
